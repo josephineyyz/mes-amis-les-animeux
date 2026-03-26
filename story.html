@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我們眼中的動物 - Mes amis, les animaux</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+  <div class="site-shell">
+    <section class="top-dark">
+      <div class="container-fluid px-4 px-lg-5 pt-4">
+        <div class="brand-title">Mes amis, les animaux.</div>
+        <nav class="navbar navbar-expand-lg navbar-dark mt-3">
+          <div class="container justify-content-center">
+            <div class="collapse navbar-collapse justify-content-center show">
+              <ul class="navbar-nav gap-lg-4 text-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="story.html">我們眼中的動物</a></li>
+                <li class="nav-item"><a class="nav-link" href="animeux.html">動物的世界</a></li>
+                <li class="nav-item"><a class="nav-link" href="home.html">Proposal</a></li>
+                <li class="nav-item"><a class="nav-link" href="home.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="authories.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="page-hero">
+        <h1>我們眼中的動物</h1>
+        <p>這裡收錄的是人們與動物相遇的可愛小故事：為小狗停留、想像小喵的世界、觀察搶飯的鳥兒，讓動物與我們共同生活。</p>
+      </div>
+    </section>
+
+    <section class="section-light">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">故事集</h2>
+        <div>
+          <button class="btn btn-outline-dark me-2" onclick="scrollStories(-320)">←</button>
+          <button class="btn btn-outline-dark" onclick="scrollStories(320)">→</button>
+        </div>
+      </div>
+
+      <div class="stories-wrapper" id="storiesWrapper">
+        <div class="story-item">
+          <a href="story-blackbird.html" class="text-decoration-none text-dark">
+            <div class="card h-100 story-card">
+              <img src="Image/blackbird.jpg" class="card-img-top story-img" alt="小黑鳥">
+              <div class="card-body">
+                <h5>高速公路旁的小黑鳥</h5>
+                <p>任憑輛高速穿梭，小黑鳥們也不動搖</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="story-item">
+          <div class="card h-100 story-card">
+            <img src="Image/cat.jpg" class="card-img-top story-img" alt="貓">
+            <div class="card-body">
+              <h5>巷口的貓</h5>
+              <p>小小的喵咪滿懷統治街坊的遠大理想</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-item">
+          <div class="card h-100 story-card">
+            <img src="Image/bird.jpg" class="card-img-top story-img" alt="鳥群">
+            <div class="card-body">
+              <h5>公園的鳥群</h5>
+              <p>大傢伙兒一起吃飯的日子，先別說話，我先吃飯</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-item">
+          <div class="card h-100 story-card">
+            <img src="Image/dog.jpg" class="card-img-top story-img" alt="小狗">
+            <div class="card-body">
+              <h5>街角的小狗</h5>
+              <p>你安安靜靜的看著我，而我看見你內心狂喜卻不敢靠近的小宇宙</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function scrollStories(amount) {
+      document.getElementById("storiesWrapper").scrollBy({
+        left: amount,
+        behavior: "smooth"
+      });
+    }
+  </script>
+</body>
+</html>
